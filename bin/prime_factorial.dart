@@ -1,5 +1,8 @@
+import 'dart:io';
+
 void main() {
-  int num = 7;
+  print("enter a number");
+  int num = int.parse(stdin.readLineSync()!);
   List factors = [];
 
   for (int i = 1; i <= num; i++) {
@@ -18,6 +21,7 @@ void main() {
         return BigInt.one;
       }
     }
-  print(factorial(num));
+
+    print(factorial(num));
   }
 }
